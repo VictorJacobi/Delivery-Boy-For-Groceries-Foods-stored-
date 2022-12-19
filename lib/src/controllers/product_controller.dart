@@ -28,15 +28,15 @@ class ProductController extends ControllerMVC {
       setState(() => product = _product);
     }, onError: (a) {
       print(a);
-      scaffoldKey.currentState?.showSnackBar(SnackBar(
-        content: Text(S.current.verify_your_internet_connection),
-      ));
+      // scaffoldKey.currentState?.showSnackBar(SnackBar(
+      //   content: Text(S.current.verify_your_internet_connection),
+      // ));
     }, onDone: () {
       calculateTotal();
       if (message != null) {
-        scaffoldKey.currentState?.showSnackBar(SnackBar(
-          content: Text(message),
-        ));
+        // scaffoldKey.currentState?.showSnackBar(SnackBar(
+        //   content: Text(message),
+        // ));
       }
     });
   }
@@ -76,9 +76,9 @@ class ProductController extends ControllerMVC {
       setState(() {
         this.loadCart = false;
       });
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text('This product was added to cart'),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text('This product was added to cart'),
+      // ));
     });
   }
 
@@ -92,9 +92,9 @@ class ProductController extends ControllerMVC {
       setState(() {
         this.favorite = value;
       });
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text('This product was added to favorite'),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text('This product was added to favorite'),
+      // ));
     });
   }
 
@@ -103,9 +103,9 @@ class ProductController extends ControllerMVC {
       setState(() {
         this.favorite = new Favorite();
       });
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text('This product was removed from favorites'),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text('This product was removed from favorites'),
+      // ));
     });
   }
 

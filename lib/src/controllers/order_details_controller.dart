@@ -23,15 +23,15 @@ class OrderDetailsController extends ControllerMVC {
       setState(() => order = _order);
     }, onError: (a) {
       print(a);
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text(S.current.verify_your_internet_connection),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text(S.current.verify_your_internet_connection),
+      // ));
     }, onDone: () {
       calculateSubtotal();
       if (message != null) {
-        scaffoldKey?.currentState?.showSnackBar(SnackBar(
-          content: Text(message),
-        ));
+        // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+        //   content: Text(message),
+        // ));
       }
     });
   }
@@ -45,9 +45,9 @@ class OrderDetailsController extends ControllerMVC {
       setState(() {
         this.order.orderStatus.id = '5';
       });
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text('The order deliverd successfully to client'),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text('The order deliverd successfully to client'),
+      // ));
     });
   }
 

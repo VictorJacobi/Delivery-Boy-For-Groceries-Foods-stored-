@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+// import 'package:fluttertoast/fluttertoast.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../../generated/i18n.dart';
@@ -43,9 +43,9 @@ class SplashScreenController extends ControllerMVC with ChangeNotifier {
       }
     });
     Timer(Duration(seconds: 20), () {
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text(S.current.verify_your_internet_connection),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text(S.current.verify_your_internet_connection),
+      // ));
     });
 
     super.initState();
@@ -80,16 +80,18 @@ class SplashScreenController extends ControllerMVC with ChangeNotifier {
           settingRepo.navigatorKey.currentState.pushReplacementNamed('/Pages', arguments: 3);
         }
       }
-    } catch (e) {}
+    } catch (e) {
+
+    }
   }
 
   Future notificationOnMessage(Map<String, dynamic> message) async {
-    Fluttertoast.showToast(
-      msg: message['notification']['title'],
-      toastLength: Toast.LENGTH_LONG,
-      gravity: ToastGravity.TOP,
-      timeInSecForIosWeb: 5,
-    );
+    // Fluttertoast.showToast(
+    //   msg: message['notification']['title'],
+    //   toastLength: Toast.LENGTH_LONG,
+    //   gravity: ToastGravity.TOP,
+    //   timeInSecForIosWeb: 5,
+    // );
   }
 
   // ignore: missing_return

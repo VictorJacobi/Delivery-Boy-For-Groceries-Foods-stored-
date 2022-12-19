@@ -29,15 +29,15 @@ class CartController extends ControllerMVC {
       }
     }, onError: (a) {
       print(a);
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text(S.current.verify_your_internet_connection),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text(S.current.verify_your_internet_connection),
+      // ));
     }, onDone: () {
       calculateSubtotal();
       if (message != null) {
-        scaffoldKey?.currentState?.showSnackBar(SnackBar(
-          content: Text(message),
-        ));
+        // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+        //   content: Text(message),
+        // ));
       }
     });
   }
@@ -50,9 +50,9 @@ class CartController extends ControllerMVC {
       });
     }, onError: (a) {
       print(a);
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text(S.current.verify_your_internet_connection),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text(S.current.verify_your_internet_connection),
+      // ));
     });
   }
 
@@ -65,9 +65,9 @@ class CartController extends ControllerMVC {
       this.carts.remove(_cart);
     });
     removeCart(_cart).then((value) {
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text(S.current.the_product_was_removed_from_your_cart(_cart.product.name)),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text(S.current.the_product_was_removed_from_your_cart(_cart.product.name)),
+      // ));
     });
   }
 

@@ -59,7 +59,7 @@ class _MapWidgetState extends StateMVC<MapWidget> {
               ),
         title: Text(
           S.of(context).delivery_addresses,
-          style: Theme.of(context).textTheme.title.merge(TextStyle(letterSpacing: 1.3)),
+          style: Theme.of(context).textTheme.titleLarge.merge(TextStyle(letterSpacing: 1.3)),
         ),
         actions: <Widget>[
           IconButton(
@@ -144,7 +144,7 @@ class _MapWidgetState extends StateMVC<MapWidget> {
                               S.of(context).order_id + "#${_con.currentOrder.id}",
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2,
-                              style: Theme.of(context).textTheme.subhead,
+                              style: Theme.of(context).textTheme.subtitle1,
                             ),
                             Text(
                               _con.currentOrder.payment?.method ?? S.of(context).cash_on_delivery,
@@ -164,7 +164,7 @@ class _MapWidgetState extends StateMVC<MapWidget> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: <Widget>[
-                          Helper.getPrice(_con.total, context, style: Theme.of(context).textTheme.display1),
+                          Helper.getPrice(_con.total, context, style: Theme.of(context).textTheme.headline1),
                           Text(
                             S.of(context).items + ':' + _con.currentOrder.productOrders?.length?.toString() ?? 0,
                             style: Theme.of(context).textTheme.caption,

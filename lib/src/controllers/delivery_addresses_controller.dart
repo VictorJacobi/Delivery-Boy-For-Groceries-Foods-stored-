@@ -22,14 +22,14 @@ class DeliveryAddressesController extends ControllerMVC {
       });
     }, onError: (a) {
       print(a);
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text(S.current.verify_your_internet_connection),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text(S.current.verify_your_internet_connection),
+      // ));
     }, onDone: () {
       if (message != null) {
-        scaffoldKey?.currentState?.showSnackBar(SnackBar(
-          content: Text(message),
-        ));
+        // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+        //   content: Text(message),
+        // ));
       }
     });
   }
@@ -44,9 +44,9 @@ class DeliveryAddressesController extends ControllerMVC {
       setState(() {
         this.addresses.add(value);
       });
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text(S.current.new_address_added_successfully),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text(S.current.new_address_added_successfully),
+      // ));
     });
   }
 
@@ -78,9 +78,9 @@ class DeliveryAddressesController extends ControllerMVC {
       setState(() {
         this.addresses.remove(address);
       });
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text("Delivery Address removed successfully"),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text("Delivery Address removed successfully"),
+      // ));
     });
   }
 }

@@ -93,28 +93,28 @@ class _PagesTestWidgetState extends State<PagesTestWidget> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.person_outline),
-              title: new Container(height: 0.0),
+              activeIcon: new Container(height: 0.0),
             ),
             BottomNavigationBarItem(
-                title: new Container(height: 5.0),
+                activeIcon: new Container(height: 5.0),
                 icon: Container(
                   width: 42,
                   height: 42,
                   decoration: BoxDecoration(
-                    color: Theme.of(context).accentColor,
+                    color: Theme.of(context).colorScheme.secondary,
                     borderRadius: BorderRadius.all(
                       Radius.circular(50),
                     ),
                     boxShadow: [
-                      BoxShadow(color: Theme.of(context).accentColor.withOpacity(0.4), blurRadius: 40, offset: Offset(0, 15)),
-                      BoxShadow(color: Theme.of(context).accentColor.withOpacity(0.4), blurRadius: 13, offset: Offset(0, 3))
+                      BoxShadow(color: Theme.of(context).colorScheme.secondary.withOpacity(0.4), blurRadius: 40, offset: Offset(0, 15)),
+                      BoxShadow(color: Theme.of(context).colorScheme.secondary.withOpacity(0.4), blurRadius: 13, offset: Offset(0, 3))
                     ],
                   ),
                   child: new Icon(Icons.home, color: Theme.of(context).primaryColor),
                 )),
             BottomNavigationBarItem(
               icon: new Icon(Icons.history),
-              title: new Container(height: 0.0),
+              activeIcon: new Container(height: 0.0),
             ),
           ],
         ),

@@ -32,7 +32,7 @@ class _ShoppingCartButtonWidgetState extends StateMVC<ShoppingCartButtonWidget> 
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
+    return MaterialButton(
       onPressed: () {
         Navigator.of(context).pushNamed('/Notifications');
       },

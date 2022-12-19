@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:products_deliveryboy/src/pages/login.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../controllers/splash_screen_controller.dart';
@@ -22,6 +24,9 @@ class SplashScreenState extends StateMVC<SplashScreen> {
   void initState() {
     super.initState();
     loadData();
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> LoginWidget()));
+    });
   }
 
   void loadData() {
@@ -50,22 +55,27 @@ class SplashScreenState extends StateMVC<SplashScreen> {
         decoration: BoxDecoration(
           color: Theme.of(context).scaffoldBackgroundColor,
         ),
-        child: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Image.asset(
-                'assets/img/logo.png',
-                width: 150,
-                fit: BoxFit.cover,
-              ),
-              SizedBox(height: 50),
-              CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).hintColor),
-              ),
-            ],
+        child: InkWell(
+          onTap: (){
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> LoginWidget()));
+          },
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset(
+                  'assets/img/logo.png',
+                  width: 150,
+                  fit: BoxFit.cover,
+                ),
+                SizedBox(height: 50),
+                CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).hintColor),
+                ),
+              ],
+            ),
           ),
         ),
       ),

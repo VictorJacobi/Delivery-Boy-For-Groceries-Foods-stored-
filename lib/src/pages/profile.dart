@@ -40,12 +40,12 @@ class _ProfileWidgetState extends StateMVC<ProfileWidget> {
           onPressed: () => widget.parentScaffoldKey?.currentState?.openDrawer(),
         ),
         automaticallyImplyLeading: false,
-        backgroundColor: Theme.of(context).accentColor,
+        backgroundColor: Theme.of(context).colorScheme.secondary,
         elevation: 0,
         centerTitle: true,
         title: Text(
           S.of(context).profile,
-          style: Theme.of(context).textTheme.title.merge(TextStyle(letterSpacing: 1.3, color: Theme.of(context).primaryColor)),
+          style: Theme.of(context).textTheme.titleLarge.merge(TextStyle(letterSpacing: 1.3, color: Theme.of(context).primaryColor)),
         ),
         actions: <Widget>[
           new ShoppingCartButtonWidget(iconColor: Theme.of(context).primaryColor, labelColor: Theme.of(context).hintColor),
@@ -67,14 +67,14 @@ class _ProfileWidgetState extends StateMVC<ProfileWidget> {
                     ),
                     title: Text(
                       S.of(context).about,
-                      style: Theme.of(context).textTheme.display1,
+                      style: Theme.of(context).textTheme.headline1,
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text(
                       _con.user.bio,
-                      style: Theme.of(context).textTheme.body1,
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                   ),
                   ListTile(
@@ -85,7 +85,7 @@ class _ProfileWidgetState extends StateMVC<ProfileWidget> {
                     ),
                     title: Text(
                       S.of(context).recent_orders,
-                      style: Theme.of(context).textTheme.display1,
+                      style: Theme.of(context).textTheme.headline1,
                     ),
                   ),
                   _con.recentOrders.isEmpty

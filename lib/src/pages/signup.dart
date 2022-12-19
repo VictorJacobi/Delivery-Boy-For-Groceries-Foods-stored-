@@ -24,7 +24,7 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
       onWillPop: () async => false,
       child: Scaffold(
         key: _con.scaffoldKey,
-        resizeToAvoidBottomPadding: false,
+        resizeToAvoidBottomInset: false,
         body: Stack(
           alignment: AlignmentDirectional.topCenter,
           children: <Widget>[
@@ -43,7 +43,7 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                 height: config.App(context).appHeight(29.5),
                 child: Text(
                   S.of(context).lets_start_with_register,
-                  style: Theme.of(context).textTheme.display3.merge(TextStyle(color: Theme.of(context).primaryColor)),
+                  style: Theme.of(context).textTheme.headline3.merge(TextStyle(color: Theme.of(context).primaryColor)),
                 ),
               ),
             ),
@@ -161,7 +161,7 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
             ),
             Positioned(
               bottom: 10,
-              child: FlatButton(
+              child: MaterialButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed('/Login');
                 },

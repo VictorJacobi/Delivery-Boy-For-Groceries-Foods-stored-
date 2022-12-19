@@ -98,7 +98,7 @@ class _EmptyOrdersWidgetState extends State<EmptyOrdersWidget> {
                 child: Text(
                   S.of(context).you_dont_have_any_order_assigned_to_you,
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.display2.merge(TextStyle(fontWeight: FontWeight.w300)),
+                  style: Theme.of(context).textTheme.headline2.merge(TextStyle(fontWeight: FontWeight.w300)),
                 ),
               ),
               SizedBox(height: 50),

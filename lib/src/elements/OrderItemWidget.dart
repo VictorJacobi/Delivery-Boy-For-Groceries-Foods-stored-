@@ -17,8 +17,8 @@ class OrderItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      splashColor: Theme.of(context).accentColor,
-      focusColor: Theme.of(context).accentColor,
+      splashColor: Theme.of(context).colorScheme.secondary,
+      focusColor: Theme.of(context).colorScheme.secondary,
       highlightColor: Theme.of(context).primaryColor,
       onTap: () {
         Navigator.of(context).pushNamed('/OrderDetails', arguments: RouteArgument(id: order.id));
@@ -66,7 +66,7 @@ class OrderItemWidget extends StatelessWidget {
                           productOrder.product.name,
                           overflow: TextOverflow.ellipsis,
                           maxLines: 2,
-                          style: Theme.of(context).textTheme.subhead,
+                          style: Theme.of(context).textTheme.subtitle1,
                         ),
                         Text(
                           productOrder.product.market.name,
@@ -89,7 +89,7 @@ class OrderItemWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: <Widget>[
                       Helper.getPrice(Helper.getTotalOrderPrice(productOrder, order.tax, order.deliveryFee), context,
-                          style: Theme.of(context).textTheme.display1),
+                          style: Theme.of(context).textTheme.headline1),
                       Text(
                         DateFormat('yyyy-MM-dd').format(productOrder.dateTime),
                         style: Theme.of(context).textTheme.caption,

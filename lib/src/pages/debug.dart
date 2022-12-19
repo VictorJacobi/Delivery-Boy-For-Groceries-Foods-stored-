@@ -29,7 +29,7 @@ class _DebugWidgetState extends State<DebugWidget> {
           centerTitle: true,
           title: Text(
             'Debug',
-            style: Theme.of(context).textTheme.title.merge(TextStyle(letterSpacing: 1.3)),
+            style: Theme.of(context).textTheme.titleLarge.merge(TextStyle(letterSpacing: 1.3)),
           ),
           actions: <Widget>[
             IconButton(

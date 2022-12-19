@@ -42,7 +42,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                     ),
                     accountName: Text(
                       currentUser.value.name,
-                      style: Theme.of(context).textTheme.title,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                     accountEmail: Text(
                       currentUser.value.email,
@@ -64,7 +64,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                   ),
                   title: Text(
                     S.of(context).orders,
-                    style: Theme.of(context).textTheme.subhead,
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ),
                 ListTile(
@@ -77,7 +77,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                   ),
                   title: Text(
                     S.of(context).notifications,
-                    style: Theme.of(context).textTheme.subhead,
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ),
                 ListTile(
@@ -90,14 +90,14 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                   ),
                   title: Text(
                     S.of(context).history,
-                    style: Theme.of(context).textTheme.subhead,
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ),
                 ListTile(
                   dense: true,
                   title: Text(
                     S.of(context).application_preferences,
-                    style: Theme.of(context).textTheme.body1,
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                   trailing: Icon(
                     Icons.remove,
@@ -114,7 +114,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                   ),
                   title: Text(
                     S.of(context).help__support,
-                    style: Theme.of(context).textTheme.subhead,
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ),
                 ListTile(
@@ -127,7 +127,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                   ),
                   title: Text(
                     S.of(context).settings,
-                    style: Theme.of(context).textTheme.subhead,
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ),
                 ListTile(
@@ -140,7 +140,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                   ),
                   title: Text(
                     S.of(context).languages,
-                    style: Theme.of(context).textTheme.subhead,
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ),
                 ListTile(
@@ -160,7 +160,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                   ),
                   title: Text(
                     Theme.of(context).brightness == Brightness.dark ? S.of(context).light_mode : S.of(context).dark_mode,
-                    style: Theme.of(context).textTheme.subhead,
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ),
                 ListTile(
@@ -175,7 +175,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                   ),
                   title: Text(
                     S.of(context).log_out,
-                    style: Theme.of(context).textTheme.subhead,
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ),
                 setting.value.enableVersion
@@ -183,7 +183,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                         dense: true,
                         title: Text(
                           S.of(context).version + " " + setting.value.appVersion,
-                          style: Theme.of(context).textTheme.body1,
+                          style: Theme.of(context).textTheme.bodyText1,
                         ),
                         trailing: Icon(
                           Icons.remove,

@@ -28,7 +28,7 @@ class _ForgetPasswordWidgetState extends StateMVC<ForgetPasswordWidget> {
       onWillPop: () async => false,
       child: Scaffold(
         key: _con.scaffoldKey,
-        resizeToAvoidBottomPadding: false,
+        resizeToAvoidBottomInset: false,
         body: Stack(
           alignment: AlignmentDirectional.topCenter,
           children: <Widget>[
@@ -47,7 +47,7 @@ class _ForgetPasswordWidgetState extends StateMVC<ForgetPasswordWidget> {
                 height: config.App(context).appHeight(37),
                 child: Text(
                   S.of(context).email_to_reset_password,
-                  style: Theme.of(context).textTheme.display3.merge(TextStyle(color: Theme.of(context).primaryColor)),
+                  style: Theme.of(context).textTheme.displayMedium.merge(TextStyle(color: Theme.of(context).primaryColor)),
                 ),
               ),
             ),
@@ -108,14 +108,14 @@ class _ForgetPasswordWidgetState extends StateMVC<ForgetPasswordWidget> {
               bottom: 10,
               child: Column(
                 children: <Widget>[
-                  FlatButton(
+                  MaterialButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacementNamed('/Login');
                     },
-                    textColor: Theme.of(context).hintColor,
+                    color: Theme.of(context).hintColor,
                     child: Text(S.of(context).i_remember_my_password_return_to_login),
                   ),
-                  FlatButton(
+                  MaterialButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacementNamed('/SignUp');
                     },

@@ -16,7 +16,7 @@ class ProfileAvatarWidget extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 30),
       decoration: BoxDecoration(
-        color: Theme.of(context).accentColor,
+        color: Theme.of(context).colorScheme.secondary,
         borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
       ),
       child: Column(
@@ -70,7 +70,7 @@ class ProfileAvatarWidget extends StatelessWidget {
           ),
           Text(
             user.name,
-            style: Theme.of(context).textTheme.headline.merge(TextStyle(color: Theme.of(context).primaryColor)),
+            style: Theme.of(context).textTheme.headlineLarge.merge(TextStyle(color: Theme.of(context).primaryColor)),
           ),
           Text(
             user.address,

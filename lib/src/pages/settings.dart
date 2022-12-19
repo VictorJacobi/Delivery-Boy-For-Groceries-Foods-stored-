@@ -30,7 +30,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
           centerTitle: true,
           title: Text(
             S.of(context).settings,
-            style: Theme.of(context).textTheme.title.merge(TextStyle(letterSpacing: 1.3)),
+            style: Theme.of(context).textTheme.titleLarge.merge(TextStyle(letterSpacing: 1.3)),
           ),
         ),
         body: currentUser.value.id == null
@@ -49,7 +49,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                                 Text(
                                   currentUser.value.name,
                                   textAlign: TextAlign.left,
-                                  style: Theme.of(context).textTheme.display2,
+                                  style: Theme.of(context).textTheme.headline2,
                                 ),
                                 Text(
                                   currentUser.value.email,
@@ -89,7 +89,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                             leading: Icon(Icons.person),
                             title: Text(
                               S.of(context).profile_settings,
-                              style: Theme.of(context).textTheme.body2,
+                              style: Theme.of(context).textTheme.bodyText2,
                             ),
                             trailing: ButtonTheme(
                               padding: EdgeInsets.all(0),
@@ -109,7 +109,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                             dense: true,
                             title: Text(
                               S.of(context).full_name,
-                              style: Theme.of(context).textTheme.body1,
+                              style: Theme.of(context).textTheme.bodyText1,
                             ),
                             trailing: Text(
                               currentUser.value.name,
@@ -121,7 +121,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                             dense: true,
                             title: Text(
                               S.of(context).email,
-                              style: Theme.of(context).textTheme.body1,
+                              style: Theme.of(context).textTheme.bodyText1,
                             ),
                             trailing: Text(
                               currentUser.value.email,
@@ -133,7 +133,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                             dense: true,
                             title: Text(
                               S.of(context).phone,
-                              style: Theme.of(context).textTheme.body1,
+                              style: Theme.of(context).textTheme.bodyText1,
                             ),
                             trailing: Text(
                               currentUser.value.phone,
@@ -145,7 +145,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                             dense: true,
                             title: Text(
                               S.of(context).address,
-                              style: Theme.of(context).textTheme.body1,
+                              style: Theme.of(context).textTheme.bodyText1,
                             ),
                             trailing: Text(
                               Helper.limitString(currentUser.value.address),
@@ -159,7 +159,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                             dense: true,
                             title: Text(
                               S.of(context).about,
-                              style: Theme.of(context).textTheme.body1,
+                              style: Theme.of(context).textTheme.bodyText1,
                             ),
                             trailing: Text(
                               Helper.limitString(currentUser.value.bio),
@@ -186,7 +186,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                             leading: Icon(Icons.settings),
                             title: Text(
                               S.of(context).app_settings,
-                              style: Theme.of(context).textTheme.body2,
+                              style: Theme.of(context).textTheme.bodyText2,
                             ),
                           ),
                           ListTile(
@@ -204,7 +204,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                                 SizedBox(width: 10),
                                 Text(
                                   S.of(context).languages,
-                                  style: Theme.of(context).textTheme.body1,
+                                  style: Theme.of(context).textTheme.bodyText1,
                                 ),
                               ],
                             ),
@@ -228,7 +228,7 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                                 SizedBox(width: 10),
                                 Text(
                                   S.of(context).help_support,
-                                  style: Theme.of(context).textTheme.body1,
+                                  style: Theme.of(context).textTheme.bodyText1,
                                 ),
                               ],
                             ),

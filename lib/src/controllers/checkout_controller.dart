@@ -47,18 +47,18 @@ class CheckoutController extends ControllerMVC {
       }
     }, onError: (a) {
       print(a);
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text(S.current.verify_your_internet_connection),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text(S.current.verify_your_internet_connection),
+      // ));
     }, onDone: () {
       calculateSubtotal();
       if (withAddOrder != null && withAddOrder == true) {
         addOrder(carts);
       }
       if (message != null) {
-        scaffoldKey?.currentState?.showSnackBar(SnackBar(
-          content: Text(message),
-        ));
+        // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+        //   content: Text(message),
+        // ));
       }
     });
   }
@@ -102,9 +102,9 @@ class CheckoutController extends ControllerMVC {
   void updateCreditCard(CreditCard creditCard) {
     userRepo.setCreditCard(creditCard).then((value) {
       setState(() {});
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text('Payment card updated successfully'),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text('Payment card updated successfully'),
+      // ));
     });
   }
 }

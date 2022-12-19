@@ -98,12 +98,12 @@ class _EmptyNotificationsWidgetState extends State<EmptyNotificationsWidget> {
                 child: Text(
                   S.of(context).dont_have_any_item_in_the_notification_list,
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.display2.merge(TextStyle(fontWeight: FontWeight.w300)),
+                  style: Theme.of(context).textTheme.headline2.merge(TextStyle(fontWeight: FontWeight.w300)),
                 ),
               ),
               SizedBox(height: 50),
               !loading
-                  ? FlatButton(
+                  ? MaterialButton(
                       onPressed: () {
                         Navigator.of(context).pushNamed('/Pages', arguments: 1);
                       },
@@ -112,7 +112,7 @@ class _EmptyNotificationsWidgetState extends State<EmptyNotificationsWidget> {
                       shape: StadiumBorder(),
                       child: Text(
                         'Go To Home',
-                        style: Theme.of(context).textTheme.title.merge(TextStyle(color: Theme.of(context).scaffoldBackgroundColor)),
+                        style: Theme.of(context).textTheme.titleLarge.merge(TextStyle(color: Theme.of(context).scaffoldBackgroundColor)),
                       ),
                     )
                   : SizedBox(),

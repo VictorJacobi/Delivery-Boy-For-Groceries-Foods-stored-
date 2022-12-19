@@ -22,18 +22,18 @@ class SettingsController extends ControllerMVC {
       setState(() {
         //this.favorite = value;
       });
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text(S.current.profile_settings_updated_successfully),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text(S.current.profile_settings_updated_successfully),
+      // ));
     });
   }
 
   void updateCreditCard(CreditCard creditCard) {
     repository.setCreditCard(creditCard).then((value) {
       setState(() {});
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text(S.current.payment_settings_updated_successfully),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text(S.current.payment_settings_updated_successfully),
+      // ));
     });
   }
 

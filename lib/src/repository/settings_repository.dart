@@ -42,7 +42,7 @@ Future<Setting> initSettings() async {
       print(CustomTrace(StackTrace.current, message: response.body).toString());
     }
   } catch (e) {
-    print(CustomTrace(StackTrace.current, message: url).toString());
+    print('Error: ${CustomTrace(StackTrace.current, message: url).toString()}');
     return Setting.fromJSON({});
   }
   return setting.value;

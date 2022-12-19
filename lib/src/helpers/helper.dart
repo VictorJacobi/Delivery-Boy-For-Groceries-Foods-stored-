@@ -137,19 +137,19 @@ class Helper {
         text: setting.value?.currencyRight != null && setting.value?.currencyRight == false
             ? TextSpan(
                 text: setting.value?.defaultCurrency,
-                style: style ?? Theme.of(context).textTheme.subhead,
+                style: style ?? Theme.of(context).textTheme.subtitle1,
                 children: <TextSpan>[
-                  TextSpan(text: myPrice.toStringAsFixed(2) ?? '', style: style ?? Theme.of(context).textTheme.subhead),
+                  TextSpan(text: myPrice.toStringAsFixed(2) ?? '', style: style ?? Theme.of(context).textTheme.subtitle1),
                 ],
               )
             : TextSpan(
                 text: myPrice.toStringAsFixed(2) ?? '',
-                style: style ?? Theme.of(context).textTheme.subhead,
+                style: style ?? Theme.of(context).textTheme.subtitle1,
                 children: <TextSpan>[
                   TextSpan(
                       text: setting.value?.defaultCurrency,
                       style: TextStyle(
-                          fontWeight: FontWeight.w400, fontSize: style != null ? style.fontSize - 4 : Theme.of(context).textTheme.subhead.fontSize - 4)),
+                          fontWeight: FontWeight.w400, fontSize: style != null ? style.fontSize - 4 : Theme.of(context).textTheme.subtitle1.fontSize - 4)),
                 ],
               ),
       );
@@ -190,7 +190,7 @@ class Helper {
     return Html(
       blockSpacing: 0,
       data: html,
-      defaultTextStyle: style ?? Theme.of(context).textTheme.body2.merge(TextStyle(fontSize: 14)),
+      defaultTextStyle: style ?? Theme.of(context).textTheme.bodyText2.merge(TextStyle(fontSize: 14)),
       useRichText: false,
       customRender: (node, children) {
         if (node is dom.Element) {

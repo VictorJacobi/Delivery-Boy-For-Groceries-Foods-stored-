@@ -28,14 +28,14 @@ class UserController extends ControllerMVC {
       repository.login(user).then((value) {
         //print(value.apiToken);
         if (value != null && value.apiToken != null) {
-          scaffoldKey?.currentState?.showSnackBar(SnackBar(
-            content: Text(S.current.welcome + value.name),
-          ));
+          // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+          //   content: Text(S.current.welcome + value.name),
+          // ));
           Navigator.of(scaffoldKey.currentContext).pushReplacementNamed('/Pages', arguments: 1);
         } else {
-          scaffoldKey?.currentState?.showSnackBar(SnackBar(
-            content: Text(S.current.wrong_email_or_password),
-          ));
+          // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+          //   content: Text(S.current.wrong_email_or_password),
+          // ));
         }
       });
     }
@@ -46,14 +46,14 @@ class UserController extends ControllerMVC {
       loginFormKey.currentState.save();
       repository.register(user).then((value) {
         if (value != null && value.apiToken != null) {
-          scaffoldKey?.currentState?.showSnackBar(SnackBar(
-            content: Text(S.current.welcome + value.name),
-          ));
+          // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+          //   content: Text(S.current.welcome + value.name),
+          // ));
           Navigator.of(scaffoldKey.currentContext).pushReplacementNamed('/Pages', arguments: 1);
         } else {
-          scaffoldKey?.currentState?.showSnackBar(SnackBar(
-            content: Text(S.current.wrong_email_or_password),
-          ));
+          // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+          //   content: Text(S.current.wrong_email_or_password),
+          // ));
         }
       });
     }
@@ -64,20 +64,20 @@ class UserController extends ControllerMVC {
       loginFormKey.currentState.save();
       repository.resetPassword(user).then((value) {
         if (value != null && value == true) {
-          scaffoldKey?.currentState?.showSnackBar(SnackBar(
-            content: Text(S.current.your_reset_link_has_been_sent_to_your_email),
-            action: SnackBarAction(
-              label: S.current.login,
-              onPressed: () {
-                Navigator.of(scaffoldKey.currentContext).pushReplacementNamed('/Login');
-              },
-            ),
-            duration: Duration(seconds: 10),
-          ));
+          // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+          //   content: Text(S.current.your_reset_link_has_been_sent_to_your_email),
+          //   action: SnackBarAction(
+          //     label: S.current.login,
+          //     onPressed: () {
+          //       Navigator.of(scaffoldKey.currentContext).pushReplacementNamed('/Login');
+          //     },
+          //   ),
+          //   duration: Duration(seconds: 10),
+          // ));
         } else {
-          scaffoldKey?.currentState?.showSnackBar(SnackBar(
-            content: Text(S.current.error_verify_email_settings),
-          ));
+          // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+          //   content: Text(S.current.error_verify_email_settings),
+          // ));
         }
       });
     }

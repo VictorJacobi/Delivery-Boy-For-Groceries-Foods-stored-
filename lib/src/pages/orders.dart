@@ -46,7 +46,7 @@ class _OrdersWidgetState extends StateMVC<OrdersWidget> {
         centerTitle: true,
         title: Text(
           S.of(context).orders,
-          style: Theme.of(context).textTheme.title.merge(TextStyle(letterSpacing: 1.3)),
+          style: Theme.of(context).textTheme.titleLarge.merge(TextStyle(letterSpacing: 1.3)),
         ),
         actions: <Widget>[
           new ShoppingCartButtonWidget(iconColor: Theme.of(context).hintColor, labelColor: Theme.of(context).accentColor),

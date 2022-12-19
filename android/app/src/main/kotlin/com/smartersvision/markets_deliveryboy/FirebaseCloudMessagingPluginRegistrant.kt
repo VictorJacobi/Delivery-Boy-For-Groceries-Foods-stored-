@@ -11,7 +11,7 @@ object FirebaseCloudMessagingPluginRegistrant {
     }
 
     private fun alreadyRegisteredWith(registry: PluginRegistry?): Boolean {
-        val key: String? = FirebaseCloudMessagingPluginRegistrant::class.java.canonicalName
+        val key: String = FirebaseCloudMessagingPluginRegistrant::class.java.canonicalName
         if (registry?.hasPlugin(key)!!) {
             return true
         }

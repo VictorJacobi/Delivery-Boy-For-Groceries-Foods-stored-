@@ -39,10 +39,10 @@ class _NotificationsWidgetState extends StateMVC<NotificationsWidget> {
         centerTitle: true,
         title: Text(
           S.of(context).notifications,
-          style: Theme.of(context).textTheme.title.merge(TextStyle(letterSpacing: 1.3)),
+          style: Theme.of(context).textTheme.titleLarge.merge(TextStyle(letterSpacing: 1.3)),
         ),
         actions: <Widget>[
-          FlatButton(
+          MaterialButton(
             onPressed: () {
               Navigator.of(context).pushNamed('/Notifications');
             },
@@ -91,7 +91,7 @@ class _NotificationsWidgetState extends StateMVC<NotificationsWidget> {
                         S.of(context).notifications,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.display1,
+                        style: Theme.of(context).textTheme.headline1,
                       ),
                       subtitle: Text(
                         S.of(context).swip_left_the_notification_to_delete_or_read__unread,

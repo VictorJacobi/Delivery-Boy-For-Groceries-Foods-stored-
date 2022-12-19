@@ -23,9 +23,9 @@ class NotificationController extends ControllerMVC {
       });
     }, onError: (a) {
       print(a);
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text(S.current.verify_your_internet_connection),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text(S.current.verify_your_internet_connection),
+      // ));
     }, onDone: () {
       if (notifications.isNotEmpty) {
         unReadNotificationsCount = notifications.where((model.Notification _n) => !_n.read ?? false).toList().length;
@@ -33,9 +33,9 @@ class NotificationController extends ControllerMVC {
         unReadNotificationsCount = 0;
       }
       if (message != null) {
-        scaffoldKey?.currentState?.showSnackBar(SnackBar(
-          content: Text(message),
-        ));
+        // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+        //   content: Text(message),
+        // ));
       }
     });
   }
@@ -51,9 +51,9 @@ class NotificationController extends ControllerMVC {
         --unReadNotificationsCount;
         _notification.read = !_notification.read;
       });
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text('This notification has marked as read'),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text('This notification has marked as read'),
+      // ));
     });
   }
 
@@ -63,9 +63,9 @@ class NotificationController extends ControllerMVC {
         ++unReadNotificationsCount;
         _notification.read = !_notification.read;
       });
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text('This notification has marked as un read'),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text('This notification has marked as un read'),
+      // ));
     });
   }
 
@@ -77,9 +77,9 @@ class NotificationController extends ControllerMVC {
         }
         this.notifications.remove(_notification);
       });
-      scaffoldKey?.currentState?.showSnackBar(SnackBar(
-        content: Text('Notification was removed'),
-      ));
+      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+      //   content: Text('Notification was removed'),
+      // ));
     });
   }
 }
