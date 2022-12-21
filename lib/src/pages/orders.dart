@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
+import 'package:products_deliveryboy/src/models/address.dart';
+import 'package:products_deliveryboy/src/models/order.dart';
+import 'package:products_deliveryboy/src/models/order_status.dart';
+import 'package:products_deliveryboy/src/models/payment.dart';
+import 'package:products_deliveryboy/src/models/user.dart';
 
 import '../../generated/i18n.dart';
 import '../controllers/order_controller.dart';
@@ -7,6 +12,7 @@ import '../elements/EmptyOrdersWidget.dart';
 import '../elements/OrderItemWidget.dart';
 import '../elements/ShoppingCartButtonWidget.dart';
 import '../models/route_argument.dart';
+import 'package:products_deliveryboy/src/models/product_order.dart';
 
 class OrdersWidget extends StatefulWidget {
   final GlobalKey<ScaffoldState> parentScaffoldKey;
@@ -75,41 +81,44 @@ class _OrdersWidgetState extends StateMVC<OrdersWidget> {
                               Navigator.of(context).pushNamed('/OrderDetails', arguments: RouteArgument(id: _con.orders.elementAt(index).id));
                             },
                           ),
-                          leading: _con.orders.elementAt(index).orderStatus.id == '5'
-                              ? Container(
-                                  width: 60,
-                                  height: 60,
-                                  decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.green.withOpacity(0.2)),
-                                  child: Icon(
-                                    Icons.check,
-                                    color: Colors.green,
-                                    size: 32,
+                          leading: Column(
+                                children: [
+                                  Container(
+                                      width: 60,
+                                      height: 60,
+                                      decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.green.withOpacity(0.2)),
+                                      child: Icon(
+                                        Icons.check,
+                                        color: Colors.green,
+                                        size: 32,
+                                      ),
+                                    ),
+                                  Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(shape: BoxShape.circle, color: Theme.of(context).hintColor.withOpacity(0.1)),
+                                    child: Icon(
+                                      Icons.update,
+                                      color: Theme.of(context).hintColor.withOpacity(0.8),
+                                      size: 30,
+                                    ),
                                   ),
-                                )
-                              : Container(
-                                  width: 60,
-                                  height: 60,
-                                  decoration: BoxDecoration(shape: BoxShape.circle, color: Theme.of(context).hintColor.withOpacity(0.1)),
-                                  child: Icon(
-                                    Icons.update,
-                                    color: Theme.of(context).hintColor.withOpacity(0.8),
-                                    size: 30,
-                                  ),
-                                ),
+                                ],
+                              ),
                           initiallyExpanded: true,
                           title: Text('${S.of(context).order_id}: #${_con.orders.elementAt(index).id}'),
                           subtitle: Text(
-                            _con.orders.elementAt(index).deliveryAddress?.address ?? S.of(context).address_not_provided_contact_client,
+                           '',
                             style: Theme.of(context).textTheme.caption,
                             softWrap: false,
                             overflow: TextOverflow.fade,
                             maxLines: 1,
                           ),
-                          children: List.generate(_con.orders.elementAt(index).productOrders.length, (indexProduct) {
+                          children: List.generate(5, (indexProduct) {
                             return OrderItemWidget(
                                 heroTag: 'my_orders',
-                                order: _con.orders.elementAt(index),
-                                productOrder: _con.orders.elementAt(index).productOrders.elementAt(indexProduct));
+                                order: Order.more(OrderStatus.more('',''),User.more('','','',''),Address.more('id', 'address', 'userId'),Payment(''),[]),
+                                productOrder: ProductOrder());
                           }),
                         ),
                       );

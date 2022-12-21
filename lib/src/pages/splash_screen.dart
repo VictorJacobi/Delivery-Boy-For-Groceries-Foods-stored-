@@ -23,7 +23,7 @@ class SplashScreenState extends StateMVC<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    loadData();
+    // loadData();
     SchedulerBinding.instance.addPostFrameCallback((_) {
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> LoginWidget()));
     });

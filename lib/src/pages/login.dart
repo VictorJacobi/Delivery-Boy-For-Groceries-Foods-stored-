@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
+import 'package:products_deliveryboy/src/pages/pages.dart';
+import 'package:products_deliveryboy/src/pages/splash_screen.dart';
 
 import '../../generated/i18n.dart';
 import '../controllers/user_controller.dart';
@@ -72,7 +74,7 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
                 width: config.App(context).appWidth(88),
 //              height: config.App(context).appHeight(55),
                 child: Form(
-                  // key: _con.loginFormKey,
+                  key: _con.loginFormKey,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -129,7 +131,8 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
                         ),
                         color: Theme.of(context).accentColor,
                         onPressed: () {
-                          // _con.login();
+                          // Navigator.push(context, MaterialPageRoute(builder: (context)=>PagesTestWidget()));
+                          _con.login();
                         },
                       ),
                       SizedBox(height: 25),

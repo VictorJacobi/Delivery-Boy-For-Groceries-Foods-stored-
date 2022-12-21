@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:fluttertoast/fluttertoast.dart';
@@ -22,43 +22,43 @@ class SplashScreenController extends ControllerMVC with ChangeNotifier {
 
   @override
   void initState() {
-    final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
-    configureFirebase(_firebaseMessaging);
-    settingRepo.setting.addListener(() {
-      if (settingRepo.setting.value.appName != null && settingRepo.setting.value.appName != '' && settingRepo.setting.value.mainColor != null) {
-        progress.value["Setting"] = 41;
-        progress?.notifyListeners();
-      }
-    });
-    settingRepo.myAddress.addListener(() {
-      if (settingRepo.myAddress.value.address != null) {
-        progress.value["DeliveryAddress"] = 29;
-        progress?.notifyListeners();
-      }
-    });
-    userRepo.currentUser.addListener(() {
-      if (userRepo.currentUser.value.auth != null) {
-        progress.value["User"] = 30;
-        progress?.notifyListeners();
-      }
-    });
-    Timer(Duration(seconds: 20), () {
-      // scaffoldKey?.currentState?.showSnackBar(SnackBar(
-      //   content: Text(S.current.verify_your_internet_connection),
-      // ));
-    });
+    // final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+    // configureFirebase(_firebaseMessaging);
+    // settingRepo.setting.addListener(() {
+    //   if (settingRepo.setting.value.appName != null && settingRepo.setting.value.appName != '' && settingRepo.setting.value.mainColor != null) {
+    //     progress.value["Setting"] = 41;
+    //     progress?.notifyListeners();
+    //   }
+    // });
+    // settingRepo.myAddress.addListener(() {
+    //   if (settingRepo.myAddress.value.address != null) {
+    //     progress.value["DeliveryAddress"] = 29;
+    //     progress?.notifyListeners();
+    //   }
+    // });
+    // userRepo.currentUser.addListener(() {
+    //   if (userRepo.currentUser.value.auth != null) {
+    //     progress.value["User"] = 30;
+    //     progress?.notifyListeners();
+    //   }
+    // });
+    // Timer(Duration(seconds: 20), () {
+    //   // scaffoldKey?.currentState?.showSnackBar(SnackBar(
+    //   //   content: Text(S.current.verify_your_internet_connection),
+    //   // ));
+    // });
 
     super.initState();
   }
 
-  void configureFirebase(FirebaseMessaging _firebaseMessaging) {
-    _firebaseMessaging.configure(
-      onMessage: notificationOnMessage,
-      onLaunch: notificationOnLaunch,
-      onResume: notificationOnResume,
-      onBackgroundMessage: myBackgroundMessageHandler,
-    );
-  }
+  // void configureFirebase(FirebaseMessaging _firebaseMessaging) {
+  //   _firebaseMessaging.configure(
+  //     onMessage: notificationOnMessage,
+  //     onLaunch: notificationOnLaunch,
+  //     onResume: notificationOnResume,
+  //     onBackgroundMessage: myBackgroundMessageHandler,
+  //   );
+  // }
 
   Future notificationOnResume(Map<String, dynamic> message) async {
     print(message['data']['id']);

@@ -3,6 +3,7 @@ class OrderStatus {
   String status;
 
   OrderStatus();
+  OrderStatus.more(this.id,this.status);
 
   OrderStatus.fromJSON(Map<String, dynamic> jsonMap) {
     try {

@@ -39,6 +39,7 @@ dependencies:
   url_launcher: 5.4.5
   firebase_messaging: 6.0.13
   cached_network_image: 2.2.0
+  change_app_package_name: ^1.1.0
 #  fluttertoast: 4.0.1
 
 dev_dependencies:

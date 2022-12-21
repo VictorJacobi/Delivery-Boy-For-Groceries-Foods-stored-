@@ -17,6 +17,7 @@ class Order {
   Address deliveryAddress;
 
   Order();
+  Order.more(this.orderStatus,this.user,this.deliveryAddress,this.payment,this.productOrders);
 
   Order.fromJSON(Map<String, dynamic> jsonMap) {
     try {

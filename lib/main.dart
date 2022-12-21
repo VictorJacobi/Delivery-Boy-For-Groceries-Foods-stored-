@@ -27,9 +27,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   void initState() {
-    settingRepo.initSettings();
-    settingRepo.getCurrentLocation();
-    userRepo.getCurrentUser();
+    // settingRepo.initSettings();
+    // settingRepo.getCurrentLocation();
+    // userRepo.getCurrentUser();
     super.initState();
   }
 

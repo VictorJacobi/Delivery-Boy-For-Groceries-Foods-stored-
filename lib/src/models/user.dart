@@ -18,6 +18,7 @@ class User {
 //  String role;
 
   User();
+  User.more(this.name,this.email,this.password,this.bio);
 
   User.fromJSON(Map<String, dynamic> jsonMap) {
     try {

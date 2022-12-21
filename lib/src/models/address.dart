@@ -12,6 +12,7 @@ class Address {
   String userId;
 
   Address();
+  Address.more(this.id,this.address,this.userId);
 
   Address.fromJSON(Map<String, dynamic> jsonMap) {
     try {
